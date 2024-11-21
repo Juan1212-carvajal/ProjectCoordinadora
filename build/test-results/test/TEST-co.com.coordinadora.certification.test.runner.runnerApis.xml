@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.coordinadora.certification.test.runner.runnerApis" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-GG169Q2" time="0.0">
+  <properties/>
+  <system-out><![CDATA[17:38:39.312 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/USUARIO/IdeaProjects/ProjectCoordinadora/src/test/resources/features/solicitudRecogida.feature
+17:38:39.362 [Test worker] INFO  -- 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at https://serenity-bdd.info                                     
+ Documentation at https://serenity-bdd.github.io                                     
+ Test Automation Training and Coaching: https://www.serenity-dojo.com                
+ Commercial Support: https://www.serenity-dojo.com/serenity-bdd-enterprise-support   
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+-------------------------------------------------------------------------------------
+
+17:38:39.365 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for story net.thucydides.model.domain.Story@f7bf4040
+17:38:39.368 [Test worker] INFO  -- Test Suite Started: Solicitud de recogida de productos
+17:38:39.422 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/USUARIO/IdeaProjects/ProjectCoordinadora/src/test/resources/features/solicitudRecogida.feature
+17:38:39.424 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for story net.thucydides.model.domain.Story@f7bf4040
+17:38:39.424 [Test worker] INFO  -- Test Suite Started: Solicitud de recogida de productos
+17:38:47.188 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reporting formats: [JSON]
+17:38:47.191 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reporting formats: [JSON]
+17:38:47.197 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Generating reports for 3 test outcomes using: net.thucydides.model.reports.json.JSONTestOutcomeReporter@17a7d6c8
+17:38:47.198 [pool-1-thread-1] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome Solicitud de recogida de productos:Solicitud de recogida con datos validos
+17:38:47.198 [pool-1-thread-3] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome Solicitud de recogida de productos:Solicitud duplicada
+17:38:47.198 [pool-1-thread-2] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome Solicitud de recogida de productos:Solicitud de recogida con fecha invalida (pasada)
+17:38:47.198 [pool-1-thread-1] DEBUG net.thucydides.model.reports.ReportService -- net.thucydides.model.reports.json.JSONTestOutcomeReporter@17a7d6c8: Generating report for test outcome: Solicitud de recogida de productos:Solicitud de recogida con datos validos
+17:38:47.198 [pool-1-thread-2] DEBUG net.thucydides.model.reports.ReportService -- net.thucydides.model.reports.json.JSONTestOutcomeReporter@17a7d6c8: Generating report for test outcome: Solicitud de recogida de productos:Solicitud de recogida con fecha invalida (pasada)
+17:38:47.198 [pool-1-thread-3] DEBUG net.thucydides.model.reports.ReportService -- net.thucydides.model.reports.json.JSONTestOutcomeReporter@17a7d6c8: Generating report for test outcome: Solicitud de recogida de productos:Solicitud duplicada
+17:38:47.203 [pool-1-thread-1] DEBUG net.thucydides.model.reports.json.JSONTestOutcomeReporter -- Generating JSON report for Solicitud de recogida con datos validos to file C:\Users\USUARIO\IdeaProjects\ProjectCoordinadora\target\site\serenity\575c59f23a603baf5bf511f91c73ec7e46517f342e404d0a69d06550b303fe07.json)
+17:38:47.203 [pool-1-thread-2] DEBUG net.thucydides.model.reports.json.JSONTestOutcomeReporter -- Generating JSON report for Solicitud de recogida con fecha invalida  to file C:\Users\USUARIO\IdeaProjects\ProjectCoordinadora\target\site\serenity\34ac2d4e051a67a42f2062b9a42ef898542f50953bde8c3d9ca6e79d1f0d6563.json)
+17:38:47.203 [pool-1-thread-3] DEBUG net.thucydides.model.reports.json.JSONTestOutcomeReporter -- Generating JSON report for Solicitud duplicada to file C:\Users\USUARIO\IdeaProjects\ProjectCoordinadora\target\site\serenity\2448f838a1dc66961e75bf878c4516b5a13a9588c6d5a0e35a4796f19c6181c6.json)
+17:38:47.224 [pool-1-thread-3] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome Solicitud de recogida de productos:Solicitud duplicada done
+17:38:47.224 [pool-1-thread-1] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome Solicitud de recogida de productos:Solicitud de recogida con datos validos done
+17:38:47.224 [pool-1-thread-2] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome Solicitud de recogida de productos:Solicitud de recogida con fecha invalida (pasada) done
+17:38:47.224 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Shutting down executor service
+17:38:47.225 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reports generated in: 27 ms
+17:38:47.275 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection -- Connection 0.0.0.0:64335<->35.184.5.45:443 closed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

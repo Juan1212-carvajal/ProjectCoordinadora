@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <intProp name="ThreadGroup.num_threads">70</intProp>
+        <intProp name="ThreadGroup.ramp_time">300</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request">
+          <stringProp name="HTTPSampler.domain">apiv2-test.coordinadora.com</stringProp>
+          <stringProp name="HTTPSampler.port">80</stringProp>
+          <stringProp name="HTTPSampler.path">/recogidas/cm-solicitud-recogidas-m s/solicitud-recogida</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;tipoEnvio&quot;: &quot;1&quot;,&#xd;
+  &quot;tipoProducto&quot;: &quot;4&quot;,&#xd;
+  &quot;indicativo&quot;: &quot;57&quot;,&#xd;
+  &quot;tipoDocumento&quot;: &quot;13&quot;,&#xd;
+  &quot;email&quot;: &quot;juan.perez@example.com&quot;,&#xd;
+  &quot;personaEntrega&quot;: &quot;1&quot;,&#xd;
+  &quot;indicativoEntrega&quot;: &quot;57&quot;,&#xd;
+  &quot;medidasAproximadas&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: 3,&#xd;
+      &quot;tipoPaq&quot;: &quot;Caja mediana&quot;,&#xd;
+      &quot;nombrePaq&quot;: &quot;Caja de herramientas&quot;,&#xd;
+      &quot;cantidad&quot;: 2&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;ciudad&quot;: &quot;Bogotá (DC)&quot;,&#xd;
+  &quot;via&quot;: &quot;&quot;,&#xd;
+  &quot;numero&quot;: &quot;&quot;,&#xd;
+  &quot;detalle&quot;: &quot;Calle 26 # 45-50 Oficina 101&quot;,&#xd;
+  &quot;tipoVia&quot;: 12,&#xd;
+  &quot;nombres&quot;: &quot;Juan&quot;,&#xd;
+  &quot;apellidos&quot;: &quot;Carvajal&quot;,&#xd;
+  &quot;documento&quot;: &quot;1012345678&quot;,&#xd;
+  &quot;celular&quot;: &quot;3101234567&quot;,&#xd;
+  &quot;ciudadDetalle&quot;: {&#xd;
+    &quot;nombre_terminal_operativa&quot;: &quot;Bogotá&quot;,&#xd;
+    &quot;tipo_servicio&quot;: &quot;A&quot;,&#xd;
+    &quot;dane_ciudad&quot;: &quot;11001&quot;,&#xd;
+    &quot;dane_actual&quot;: &quot;11001000&quot;,&#xd;
+    &quot;ciudad_tarifa&quot;: &quot;11001000&quot;,&#xd;
+    &quot;sms&quot;: true,&#xd;
+    &quot;cubre_mqp&quot;: true,&#xd;
+    &quot;codigo_postal&quot;: &quot;110111&quot;,&#xd;
+    &quot;terminal_operativa&quot;: 1,&#xd;
+    &quot;cubre_me&quot;: true,&#xd;
+    &quot;area_telefono&quot;: 1,&#xd;
+    &quot;observaciones2&quot;: &quot;&quot;,&#xd;
+    &quot;codigo&quot;: &quot;11001000&quot;,&#xd;
+    &quot;tipo_poblacion&quot;: &quot;U&quot;,&#xd;
+    &quot;activo&quot;: true,&#xd;
+    &quot;codigo_terminal&quot;: 1,&#xd;
+    &quot;codigo_interno&quot;: 101,&#xd;
+    &quot;mensajeria&quot;: true,&#xd;
+    &quot;cubre_mm&quot;: true,&#xd;
+    &quot;departamento&quot;: &quot;11&quot;,&#xd;
+    &quot;cubre_cm&quot;: true,&#xd;
+    &quot;nombre&quot;: &quot;Bogotá (DC)&quot;,&#xd;
+    &quot;abreviado&quot;: &quot;BOG&quot;,&#xd;
+    &quot;nombre_terminal&quot;: &quot;Bogotá&quot;,&#xd;
+    &quot;observaciones&quot;: &quot;&quot;&#xd;
+  },&#xd;
+  &quot;direccion&quot;: &quot;Cra 15 # 45-32&quot;,&#xd;
+  &quot;fechaRecogida&quot;: &quot;2024-11-26&quot;,&#xd;
+  &quot;nombreEntrega&quot;: &quot;Juan&quot;,&#xd;
+  &quot;apellidosEntrega&quot;: &quot;Perez&quot;,&#xd;
+  &quot;celularEntrega&quot;: &quot;3101234567&quot;,&#xd;
+  &quot;emailUsuario&quot;: &quot;juan.carvajal@email.com&quot;,&#xd;
+  &quot;descripcionTipoVia&quot;: &quot;Carrera&quot;,&#xd;
+  &quot;aplicativo&quot;: &quot;envios&quot;&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
+          <stringProp name="ConstantTimer.delay">300</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

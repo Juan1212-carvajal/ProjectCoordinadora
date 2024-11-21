@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Solicitud de recogida de productos" tests="3" skipped="0" failures="1" errors="0" timestamp="2024-11-20T22:38:39" hostname="DESKTOP-GG169Q2" time="7.76">
+  <properties/>
+  <testcase name="Solicitud de recogida con datos validos" classname="Solicitud de recogida de productos" time="4.608">
+    <failure message="java.lang.AssertionError: El mensaje de la respuesta no coincide expected:&lt;Solicitud recogida programada exitosamente&gt; but was:&lt;null&gt;" type="java.lang.AssertionError">java.lang.AssertionError: El mensaje de la respuesta no coincide expected:&lt;Solicitud recogida programada exitosamente&gt; but was:&lt;null&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at co.com.coordinadora.certification.test.stepdefinitions.SolicitudRecogidaSteps.elMensajeDeLaRespuestaDebeSer(SolicitudRecogidaSteps.java:112)
+	at ✽.el mensaje de la respuesta debe ser &quot;Solicitud recogida programada exitosamente&quot;(file:///C:/Users/USUARIO/IdeaProjects/ProjectCoordinadora/src/test/resources/features/solicitudRecogida.feature:34)
+</failure>
+  </testcase>
+  <testcase name="Solicitud de recogida con fecha invalida (pasada)" classname="Solicitud de recogida de productos" time="1.557"/>
+  <testcase name="Solicitud duplicada" classname="Solicitud de recogida de productos" time="1.594"/>
+  <system-out><![CDATA[17:38:39.481 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/USUARIO/IdeaProjects/ProjectCoordinadora/src/test/resources/features/solicitudRecogida.feature
+17:38:39.574 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Solicitud de recogida con datos validos(solicitud-de-recogida-de-productos;solicitud-de-recogida-con-datos-validos)
+--------------------------------------------------------------------------------
+Usuario listo para hacer una solicitud
+17:38:41.431 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Get connection for route {s}->https://apiv2-test.coordinadora.com:443
+17:38:41.632 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator -- Connecting to apiv2-test.coordinadora.com:443
+17:38:41.911 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies -- CookieSpec selected: ignoreCookies
+17:38:41.912 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache -- Auth cache not set in the context
+17:38:41.912 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication -- Target auth state: UNCHALLENGED
+17:38:41.912 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication -- Proxy auth state: UNCHALLENGED
+17:38:41.912 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient -- Attempt 1 to execute request
+17:38:41.912 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection -- Sending request: POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "Accept: */*[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "Content-Type: application/json[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "Content-Length: 1499[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "Host: apiv2-test.coordinadora.com[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "Connection: Keep-Alive[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.wire --  >> "[\r][\n]"
+17:38:41.913 [Test worker] DEBUG org.apache.http.headers -- >> POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1
+17:38:41.913 [Test worker] DEBUG org.apache.http.headers -- >> Accept: */*
+17:38:41.914 [Test worker] DEBUG org.apache.http.headers -- >> Content-Type: application/json
+17:38:41.914 [Test worker] DEBUG org.apache.http.headers -- >> Content-Length: 1499
+17:38:41.914 [Test worker] DEBUG org.apache.http.headers -- >> Host: apiv2-test.coordinadora.com
+17:38:41.914 [Test worker] DEBUG org.apache.http.headers -- >> Connection: Keep-Alive
+17:38:41.914 [Test worker] DEBUG org.apache.http.headers -- >> User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+17:38:41.914 [Test worker] DEBUG org.apache.http.headers -- >> Accept-Encoding: gzip,deflate
+17:38:41.914 [Test worker] DEBUG org.apache.http.wire --  >> "{[\n]"
+17:38:41.914 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoEnvio": "1",[\n]"
+17:38:41.914 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoProducto": "4",[\n]"
+17:38:41.914 [Test worker] DEBUG org.apache.http.wire --  >> "  "indicativo": "57",[\n]"
+17:38:41.914 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoDocumento": "13",[\n]"
+17:38:41.914 [Test worker] DEBUG org.apache.http.wire --  >> "  "email": "juan.carvajal@email.com",[\n]"
+17:38:41.914 [Test worker] DEBUG org.apache.http.wire --  >> "  "personaEntrega": "1",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "indicativoEntrega": "57",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "medidasAproximadas": [{[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "id": 3,[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipoPaq": "Caja mediana",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombrePaq": "Caja de herramientas",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "cantidad": 2[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  }],[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "ciudad": "Bogota (DC)",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "via": "null",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "numero": "null",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "detalle": "Calle 27 # 45-50 Oficina 101",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoVia": 12,[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "nombres": "Juan",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "apellidos": "Carvajal",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "documento": "1012345611",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "celular": "3101234562",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "  "ciudadDetalle": {[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre_terminal_operativa": "Bogota",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipo_servicio": "A",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "dane_ciudad": "11001",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "dane_actual": "11001000",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "ciudad_tarifa": "11001000",[\n]"
+17:38:41.915 [Test worker] DEBUG org.apache.http.wire --  >> "    "sms": true,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_mqp": true,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_postal": "110111",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "terminal_operativa": 1,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_me": true,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "area_telefono": 1,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "observaciones2": "",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo": "11001000",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipo_poblacion": "U",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "activo": true,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_terminal": 1,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_interno": 101,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "mensajeria": true,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_mm": true,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "departamento": "11",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_cm": true,[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre": "null",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "abreviado": "BOG",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre_terminal": "Bogota",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "    "observaciones": ""[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "  },[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "  "direccion": "Cra 15 # 45-32",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "  "fechaRecogida": "2024-11-27",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "  "nombreEntrega": "Juan",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "  "apellidosEntrega": "Carvajal",[\n]"
+17:38:41.916 [Test worker] DEBUG org.apache.http.wire --  >> "  "celularEntrega": "3101234562",[\n]"
+17:38:41.917 [Test worker] DEBUG org.apache.http.wire --  >> "  "emailUsuario": "juan.carvajal@email.com",[\n]"
+17:38:41.917 [Test worker] DEBUG org.apache.http.wire --  >> "  "descripcionTipoVia": "Carrera",[\n]"
+17:38:41.917 [Test worker] DEBUG org.apache.http.wire --  >> "  "aplicativo": "envios"[\n]"
+17:38:41.917 [Test worker] DEBUG org.apache.http.wire --  >> "}"
+17:38:43.437 [Test worker] DEBUG org.apache.http.wire --  << "HTTP/1.1 200 OK[\r][\n]"
+17:38:43.438 [Test worker] DEBUG org.apache.http.wire --  << "content-security-policy: default-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: validator.swagger.io;script-src 'self' https: 'unsafe-inline';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests[\r][\n]"
+17:38:43.438 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-embedder-policy: require-corp[\r][\n]"
+17:38:43.438 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-opener-policy: same-origin[\r][\n]"
+17:38:43.438 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-resource-policy: same-origin[\r][\n]"
+17:38:43.438 [Test worker] DEBUG org.apache.http.wire --  << "x-dns-prefetch-control: off[\r][\n]"
+17:38:43.438 [Test worker] DEBUG org.apache.http.wire --  << "expect-ct: max-age=0[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "x-frame-options: SAMEORIGIN[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "strict-transport-security: max-age=15552000; includeSubDomains[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "x-download-options: noopen[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "x-content-type-options: nosniff[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "origin-agent-cluster: ?1[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "x-permitted-cross-domain-policies: none[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "referrer-policy: no-referrer[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "x-xss-protection: 0[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "vary: Origin[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "access-control-allow-origin: *[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "content-type: application/json; charset=utf-8[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "content-length: 245[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "date: Wed, 20 Nov 2024 22:38:44 GMT[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "x-envoy-upstream-service-time: 1408[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "server: istio-envoy[\r][\n]"
+17:38:43.439 [Test worker] DEBUG org.apache.http.wire --  << "[\r][\n]"
+17:38:43.440 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection -- Receiving response: HTTP/1.1 200 OK
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << HTTP/1.1 200 OK
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << content-security-policy: default-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: validator.swagger.io;script-src 'self' https: 'unsafe-inline';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-embedder-policy: require-corp
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-opener-policy: same-origin
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-resource-policy: same-origin
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << x-dns-prefetch-control: off
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << expect-ct: max-age=0
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << x-frame-options: SAMEORIGIN
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << strict-transport-security: max-age=15552000; includeSubDomains
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << x-download-options: noopen
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << x-content-type-options: nosniff
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << origin-agent-cluster: ?1
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << x-permitted-cross-domain-policies: none
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << referrer-policy: no-referrer
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << x-xss-protection: 0
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << vary: Origin
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << access-control-allow-origin: *
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << content-type: application/json; charset=utf-8
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << content-length: 245
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << date: Wed, 20 Nov 2024 22:38:44 GMT
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << x-envoy-upstream-service-time: 1408
+17:38:43.440 [Test worker] DEBUG org.apache.http.headers -- << server: istio-envoy
+17:38:43.443 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient -- Connection can be kept alive indefinitely
+17:38:43.445 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder -- Parsing response as: application/json; charset=utf-8
+17:38:43.446 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder -- Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+17:38:43.471 [Test worker] DEBUG org.apache.http.wire --  << "{"isError":true,"data":{"message":"Error, Ya existe una recogida programada para hoy, id: 26785701","idRecogidaAnterior":"26785701","recogida_anterior":true},"timestamp":"2024-11-20T22:38:44.085Z","id":"87da2718d07053c2ad5aa87d1826a8087c647eca"}"
+17:38:43.471 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@dae5e0
+17:38:43.471 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Connection can be kept alive indefinitely
+200
+{"isError":true,"data":{"message":"Error, Ya existe una recogida programada para hoy, id: 26785701","idRecogidaAnterior":"26785701","recogida_anterior":true},"timestamp":"2024-11-20T22:38:44.085Z","id":"87da2718d07053c2ad5aa87d1826a8087c647eca"}
+17:38:43.948 [Test worker] ERROR  -- 
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+
+Solicitud de recogida con datos validos
+-----------------------------------------------------------------------
+17:38:43.951 [Test worker] DEBUG  -- RELATED ISSUES: 
+17:38:44.016 [Test worker] ERROR  --     Test failed at step: And el mensaje de la respuesta debe ser "Solicitud recogida programada exitosamente"
+17:38:44.016 [Test worker] ERROR  --     El mensaje de la respuesta no coincide expected:<Solicitud recogida programada exitosamente> but was:<null>
+17:38:44.037 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/USUARIO/IdeaProjects/ProjectCoordinadora/src/test/resources/features/solicitudRecogida.feature
+17:38:44.038 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Solicitud de recogida con fecha invalida (pasada)(solicitud-de-recogida-de-productos;solicitud-de-recogida-con-fecha-invalida-(pasada))
+--------------------------------------------------------------------------------
+Usuario listo para hacer una solicitud
+17:38:44.060 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Get connection for route {s}->https://apiv2-test.coordinadora.com:443
+17:38:44.061 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator -- Connecting to apiv2-test.coordinadora.com:443
+17:38:44.240 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies -- CookieSpec selected: ignoreCookies
+17:38:44.240 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache -- Auth cache not set in the context
+17:38:44.240 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication -- Target auth state: UNCHALLENGED
+17:38:44.240 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication -- Proxy auth state: UNCHALLENGED
+17:38:44.240 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient -- Attempt 1 to execute request
+17:38:44.240 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection -- Sending request: POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "Accept: */*[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "Content-Type: application/json[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "Content-Length: 1489[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "Host: apiv2-test.coordinadora.com[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "Connection: Keep-Alive[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.wire --  >> "[\r][\n]"
+17:38:44.240 [Test worker] DEBUG org.apache.http.headers -- >> POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1
+17:38:44.240 [Test worker] DEBUG org.apache.http.headers -- >> Accept: */*
+17:38:44.240 [Test worker] DEBUG org.apache.http.headers -- >> Content-Type: application/json
+17:38:44.241 [Test worker] DEBUG org.apache.http.headers -- >> Content-Length: 1489
+17:38:44.241 [Test worker] DEBUG org.apache.http.headers -- >> Host: apiv2-test.coordinadora.com
+17:38:44.241 [Test worker] DEBUG org.apache.http.headers -- >> Connection: Keep-Alive
+17:38:44.241 [Test worker] DEBUG org.apache.http.headers -- >> User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+17:38:44.241 [Test worker] DEBUG org.apache.http.headers -- >> Accept-Encoding: gzip,deflate
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "{[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoEnvio": "1",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoProducto": "4",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "indicativo": "57",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoDocumento": "13",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "email": "juan.perez@example.com",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "personaEntrega": "1",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "indicativoEntrega": "57",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "medidasAproximadas": [{[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "    "id": 3,[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipoPaq": "Caja mediana",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombrePaq": "Caja de herramientas",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "    "cantidad": 2[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  }],[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "ciudad": "Bogota (DC)",[\n]"
+17:38:44.241 [Test worker] DEBUG org.apache.http.wire --  >> "  "via": "null",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "numero": "null",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "detalle": "Calle 26 # 45-50 Oficina 101",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoVia": 12,[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "nombres": "Juan",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "apellidos": "Perez",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "documento": "1012345678",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "celular": "3101234567",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "  "ciudadDetalle": {[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre_terminal_operativa": "Bogota",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipo_servicio": "A",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "dane_ciudad": "11001",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "dane_actual": "11001000",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "ciudad_tarifa": "11001000",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "sms": true,[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_mqp": true,[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_postal": "110111",[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "terminal_operativa": 1,[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_me": true,[\n]"
+17:38:44.242 [Test worker] DEBUG org.apache.http.wire --  >> "    "area_telefono": 1,[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "observaciones2": "",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo": "11001000",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipo_poblacion": "U",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "activo": true,[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_terminal": 1,[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_interno": 101,[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "mensajeria": true,[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_mm": true,[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "departamento": "11",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_cm": true,[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre": "null",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "abreviado": "BOG",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre_terminal": "Bogota",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "    "observaciones": ""[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  },[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "direccion": "Cra 15 # 45-32",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "fechaRecogida": "null",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "nombreEntrega": "Juan",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "apellidosEntrega": "Carvajal",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "celularEntrega": "3101234561",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "emailUsuario": "juan.carvajal@email.com",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "descripcionTipoVia": "Carrera",[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "  "aplicativo": "envios"[\n]"
+17:38:44.243 [Test worker] DEBUG org.apache.http.wire --  >> "}"
+17:38:45.563 [Test worker] DEBUG org.apache.http.wire --  << "HTTP/1.1 200 OK[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "content-security-policy: default-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: validator.swagger.io;script-src 'self' https: 'unsafe-inline';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-embedder-policy: require-corp[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-opener-policy: same-origin[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-resource-policy: same-origin[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "x-dns-prefetch-control: off[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "expect-ct: max-age=0[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "x-frame-options: SAMEORIGIN[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "strict-transport-security: max-age=15552000; includeSubDomains[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "x-download-options: noopen[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "x-content-type-options: nosniff[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "origin-agent-cluster: ?1[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "x-permitted-cross-domain-policies: none[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "referrer-policy: no-referrer[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "x-xss-protection: 0[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "vary: Origin[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "access-control-allow-origin: *[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "content-type: application/json; charset=utf-8[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "content-length: 224[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "date: Wed, 20 Nov 2024 22:38:46 GMT[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "x-envoy-upstream-service-time: 1216[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "server: istio-envoy[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.wire --  << "[\r][\n]"
+17:38:45.564 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection -- Receiving response: HTTP/1.1 200 OK
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << HTTP/1.1 200 OK
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << content-security-policy: default-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: validator.swagger.io;script-src 'self' https: 'unsafe-inline';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-embedder-policy: require-corp
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-opener-policy: same-origin
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-resource-policy: same-origin
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << x-dns-prefetch-control: off
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << expect-ct: max-age=0
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << x-frame-options: SAMEORIGIN
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << strict-transport-security: max-age=15552000; includeSubDomains
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << x-download-options: noopen
+17:38:45.564 [Test worker] DEBUG org.apache.http.headers -- << x-content-type-options: nosniff
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << origin-agent-cluster: ?1
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << x-permitted-cross-domain-policies: none
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << referrer-policy: no-referrer
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << x-xss-protection: 0
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << vary: Origin
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << access-control-allow-origin: *
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << content-type: application/json; charset=utf-8
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << content-length: 224
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << date: Wed, 20 Nov 2024 22:38:46 GMT
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << x-envoy-upstream-service-time: 1216
+17:38:45.565 [Test worker] DEBUG org.apache.http.headers -- << server: istio-envoy
+17:38:45.565 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient -- Connection can be kept alive indefinitely
+17:38:45.565 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder -- Parsing response as: application/json; charset=utf-8
+17:38:45.565 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder -- Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+17:38:45.566 [Test worker] DEBUG org.apache.http.wire --  << "{"isError":true,"data":{"message":"El campo fecha debe ser diferente de vacio y debe tener un formato valido.","recogida_anterior":true},"timestamp":"2024-11-20T22:38:46.227Z","id":"a45d5c7facd299a3b6ac85dc8cc509ea3c0afd34"}"
+17:38:45.566 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@32069394
+17:38:45.566 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Connection can be kept alive indefinitely
+17:38:45.584 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Solicitud de recogida con fecha invalida 
+----------------------------------------------------------------------
+17:38:45.592 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/USUARIO/IdeaProjects/ProjectCoordinadora/src/test/resources/features/solicitudRecogida.feature
+17:38:45.593 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Solicitud duplicada(solicitud-de-recogida-de-productos;solicitud-duplicada)
+--------------------------------------------------------------------------------
+Usuario listo para hacer una solicitud
+17:38:45.607 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Get connection for route {s}->https://apiv2-test.coordinadora.com:443
+17:38:45.607 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator -- Connecting to apiv2-test.coordinadora.com:443
+17:38:45.796 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies -- CookieSpec selected: ignoreCookies
+17:38:45.796 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache -- Auth cache not set in the context
+17:38:45.796 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication -- Target auth state: UNCHALLENGED
+17:38:45.796 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication -- Proxy auth state: UNCHALLENGED
+17:38:45.796 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient -- Attempt 1 to execute request
+17:38:45.796 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection -- Sending request: POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "Accept: */*[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "Content-Type: application/json[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "Content-Length: 1499[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "Host: apiv2-test.coordinadora.com[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "Connection: Keep-Alive[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "[\r][\n]"
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> POST /recogidas/cm-solicitud-recogidas-ms/solicitud-recogida HTTP/1.1
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> Accept: */*
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> Content-Type: application/json
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> Content-Length: 1499
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> Host: apiv2-test.coordinadora.com
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> Connection: Keep-Alive
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+17:38:45.796 [Test worker] DEBUG org.apache.http.headers -- >> Accept-Encoding: gzip,deflate
+17:38:45.796 [Test worker] DEBUG org.apache.http.wire --  >> "{[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoEnvio": "1",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoProducto": "4",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "indicativo": "57",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoDocumento": "13",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "email": "juan.carvajal@email.com",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "personaEntrega": "1",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "indicativoEntrega": "57",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "medidasAproximadas": [{[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "id": 3,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipoPaq": "Caja mediana",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombrePaq": "Caja de herramientas",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "cantidad": 2[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  }],[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "ciudad": "Bogota (DC)",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "via": "null",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "numero": "null",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "detalle": "Calle 26 # 45-50 Oficina 101",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "tipoVia": 12,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "nombres": "Juan",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "apellidos": "Carvajal",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "documento": "1012345679",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "celular": "3101234562",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "  "ciudadDetalle": {[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre_terminal_operativa": "Bogota",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipo_servicio": "A",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "dane_ciudad": "11001",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "dane_actual": "11001000",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "ciudad_tarifa": "11001000",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "sms": true,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_mqp": true,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_postal": "110111",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "terminal_operativa": 1,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_me": true,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "area_telefono": 1,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "observaciones2": "",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo": "11001000",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "tipo_poblacion": "U",[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "activo": true,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_terminal": 1,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "codigo_interno": 101,[\n]"
+17:38:45.797 [Test worker] DEBUG org.apache.http.wire --  >> "    "mensajeria": true,[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_mm": true,[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "    "departamento": "11",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "    "cubre_cm": true,[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre": "null",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "    "abreviado": "BOG",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "    "nombre_terminal": "Bogota",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "    "observaciones": ""[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  },[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "direccion": "Cra 15 # 45-32",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "fechaRecogida": "2024-11-26",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "nombreEntrega": "Juan",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "apellidosEntrega": "Carvajal",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "celularEntrega": "3101234561",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "emailUsuario": "juan.carvajal@email.com",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "descripcionTipoVia": "Carrera",[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "  "aplicativo": "envios"[\n]"
+17:38:45.798 [Test worker] DEBUG org.apache.http.wire --  >> "}"
+17:38:47.165 [Test worker] DEBUG org.apache.http.wire --  << "HTTP/1.1 200 OK[\r][\n]"
+17:38:47.165 [Test worker] DEBUG org.apache.http.wire --  << "content-security-policy: default-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: validator.swagger.io;script-src 'self' https: 'unsafe-inline';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-embedder-policy: require-corp[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-opener-policy: same-origin[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "cross-origin-resource-policy: same-origin[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "x-dns-prefetch-control: off[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "expect-ct: max-age=0[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "x-frame-options: SAMEORIGIN[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "strict-transport-security: max-age=15552000; includeSubDomains[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "x-download-options: noopen[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "x-content-type-options: nosniff[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "origin-agent-cluster: ?1[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "x-permitted-cross-domain-policies: none[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "referrer-policy: no-referrer[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "x-xss-protection: 0[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "vary: Origin[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "access-control-allow-origin: *[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "content-type: application/json; charset=utf-8[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "content-length: 245[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "date: Wed, 20 Nov 2024 22:38:47 GMT[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "x-envoy-upstream-service-time: 1271[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "server: istio-envoy[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.wire --  << "[\r][\n]"
+17:38:47.166 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection -- Receiving response: HTTP/1.1 200 OK
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << HTTP/1.1 200 OK
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << content-security-policy: default-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: validator.swagger.io;script-src 'self' https: 'unsafe-inline';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-embedder-policy: require-corp
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-opener-policy: same-origin
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << cross-origin-resource-policy: same-origin
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << x-dns-prefetch-control: off
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << expect-ct: max-age=0
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << x-frame-options: SAMEORIGIN
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << strict-transport-security: max-age=15552000; includeSubDomains
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << x-download-options: noopen
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << x-content-type-options: nosniff
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << origin-agent-cluster: ?1
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << x-permitted-cross-domain-policies: none
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << referrer-policy: no-referrer
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << x-xss-protection: 0
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << vary: Origin
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << access-control-allow-origin: *
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << content-type: application/json; charset=utf-8
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << content-length: 245
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << date: Wed, 20 Nov 2024 22:38:47 GMT
+17:38:47.166 [Test worker] DEBUG org.apache.http.headers -- << x-envoy-upstream-service-time: 1271
+17:38:47.167 [Test worker] DEBUG org.apache.http.headers -- << server: istio-envoy
+17:38:47.167 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient -- Connection can be kept alive indefinitely
+17:38:47.167 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder -- Parsing response as: application/json; charset=utf-8
+17:38:47.167 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder -- Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+17:38:47.168 [Test worker] DEBUG org.apache.http.wire --  << "{"isError":true,"data":{"message":"Error, Ya existe una recogida programada para hoy, id: 26785606","idRecogidaAnterior":"26785606","recogida_anterior":true},"timestamp":"2024-11-20T22:38:47.838Z","id":"695c299326a4d9dad0bc468955aed1dcd452f386"}"
+17:38:47.168 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6a38e3d1
+17:38:47.169 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager -- Connection can be kept alive indefinitely
+17:38:47.178 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Solicitud duplicada
+----------------------------------------------------------------------
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
